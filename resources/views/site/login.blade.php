@@ -146,22 +146,22 @@
                 </ul>
             </li>
             <li class="dropdown" title='Notificações'>
-            <span class='badge badge-pill badge-danger' style='margin-top:-13px'>0</span>
-            <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#">
-                <i class="fa fa-user fa-lg"></i>
-            </a>
-            <ul class="dropdown-menu mailbox animated bounceInDown" style="overflow-y: auto;max-height: 400px;"><li>
+        <span class='badge badge-pill badge-danger' style='margin-top:-13px'>0</span>
+        <a class="dropdown-toggle waves-effect waves-light" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-lg"></i>
+        </a>
+        <ul class="dropdown-menu mailbox animated bounceInDown" style="overflow-y: auto;max-height: 400px;"><li>
         <div style='width: 100%;text-align: center;'><h5>Notificações</h5></div>
         <div class="message-center">
             <input type="hidden" id="usuario_logado_id" value="92290" class="form-control">
         </div>
-            </li>
+        </li>
         </ul>
             </li>
-        <li class="dropdown">
-            <a href="/agendamento" title="Sala de Reunião">
-                <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-                </a>
+            <li class="dropdown">
+                <a href="/agendamento" title="Sala de Reunião">
+                    <i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
+            </a>
             </li>
 
             <li class="dropdown">
@@ -172,8 +172,7 @@
           
             <!-- /.dropdown -->
             <li class="dropdown">
-                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                    <b class="hidden-xs"> Clicie Horrana Jeronimo Albino <span class="caret"></span> </b>
+                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" role="button" aria-expanded="false" aria-haspopup="true" v-pre><b class="hidden-xs"> Clicie Horrana Jeronimo Albino <span class="caret"></span></b>
                 </a>
                 <ul class="dropdown-menu dropdown-user animated flipInY">
                     <li>
@@ -182,11 +181,10 @@
                     <li>
                         <a href="https://gamasoft.distribuidoragama.com.br/logout" onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
-                            <i class="ti-power-off"></i> Logout
-                        </a>
+                        <i class="ti-power-off"></i>Logout</a>
 
                         <form id="logout-form" action="https://gamasoft.distribuidoragama.com.br/logout" method="POST" style="display: none;">
-                            <input type="hidden" name="_token" value="Ie3g9pYLR0tcUIY2dXLNpjyyrlZaXeG4r48MPYGB">
+                        <input type="hidden" name="_token" value="Ie3g9pYLR0tcUIY2dXLNpjyyrlZaXeG4r48MPYGB">
                         </form>
                     </li>
                 </ul>
@@ -196,148 +194,117 @@
     </div>
 </nav>
 
-<<div class="white-box">
-                        <div class="row" style="margin: 0px 0px 10px !important;border-bottom:1px dashed #ccc; padding-bottom:10px;">
-                        </div>
+    <div class="white-box">
+            <div class="row" style="margin: 0px 0px 10px !important;border-bottom:1px dashed #ccc; padding-bottom:10px;">
+            </div>
 
-                        <div class="col-md-3">
-                            <label>Data Inicial</label>
-                                                        <input type="date" class="form-control" value="2022-06-01" id="inicio_periodo">
-                        </div>
+            <div class="col-md-3">
+                <label>Data Inicial</label>
+                                            <input type="date" class="form-control" value="2022-06-01" id="inicio_periodo">
+            </div>
 
-                        <div class="col-md-3">
-                            <label>Data Final</label>
-                                                        <input type="date" class="form-control" value="2022-06-30" id="fim_periodo">
-                        </div>
+            <div class="col-md-3">
+                <label>Data Final</label>
+                                            <input type="date" class="form-control" value="2022-06-30" id="fim_periodo">
+            </div>
 
-                        <div class="col-md-1">
-                            <label>Cliente</label>
-                            <input type="text" class="form-control" value="" id="cliente_filtro">
-                        </div>
+            <div class="col-md-1">
+                <label>Cliente</label>
+                <input type="text" class="form-control" value="" id="cliente_filtro">
+            </div>
 
-                        <div class="col-md-1">
-                            <label>Produto</label>
-                            <input type="text" class="form-control" value="" id="produto_filtro">
-                        </div>
+            <div class="col-md-1">
+                <label>Produto</label>
+                <input type="text" class="form-control" value="" id="produto_filtro">
+            </div>
 
-                        <div class="col-md-2">
-                            <label>Chamado</label>
-                            <input type="text" class="form-control" value="" id="chamado_filtro">
-                        </div>
+            <div class="col-md-2">
+                <label>Chamado</label>
+                <input type="text" class="form-control" value="" id="chamado_filtro">
+            </div>
 
-                        <div class="col-md-2">
-                            <label>Nota</label>
-                            <input type="text" class="form-control" value="" id="nota_filtro">
-                        </div>
+            <div class="col-md-2">
+                <label>Nota</label>
+                <input type="text" class="form-control" value="" id="nota_filtro">
+            </div>
 
-                        <div class="col-md-2 col-xs-6">
-                            <label>Aberto por</label>         
-                            <select class="form-control" id="usuario">
-                                <option value="">Selecione</option>
-                                <option value="92396">Adrieli Aparecida Chaves da Silva</option>
-                                <option value="92387">Akilla Silva Sousa Guimaraes</option>
-                                <option value="92271">Ataiana de Araujo Rosa</option>
-                                <option value="92290">Clicie Horrana Jeronimo Albino</option>
-                                <option value="92340">Daiane Pereira De Oliveira Guimaraes</option>
-                                <option value="86183">Erica Cristina da Silva</option>
-                                <option value="19">Henrique Deivson Soares Tavares</option>
-                                <option value="92287">Jessica Maria Cattone</option>
-                                <option value="853">Joao Paulo de Assis Santos</option>
-                                <option value="44">Juliane Amato Silva</option>
-                                <option value="44164">Naiara Rios de Oliveira Araujo</option>
-                                <option value="222">Rosimere Aparecida Barbosa</option>
-                                <option value="233">Shauany Evangelista de Oliveira</option>
-                                <option value="92367">Yara Caroline Machado Santana </option>
-                                <option value="92412">Rosileide da Silva Cunha</option>
-                            </select>
-                        </div>
+            <div class="col-md-2 col-xs-6">
+                <label>Aberto por</label>         
+                <select class="form-control" id="usuario">
+                    <option value="">Selecione</option>
+                    <option value="92396">Adrieli Aparecida Chaves da Silva</option>
+                    <option value="92387">Akilla Silva Sousa Guimaraes</option>
+                    <option value="92271">Ataiana de Araujo Rosa</option>
+                    <option value="92290">Clicie Horrana Jeronimo Albino</option>
+                    <option value="92340">Daiane Pereira De Oliveira Guimaraes</option>
+                    <option value="86183">Erica Cristina da Silva</option>
+                    <option value="19">Henrique Deivson Soares Tavares</option>
+                    <option value="92287">Jessica Maria Cattone</option>
+                    <option value="853">Joao Paulo de Assis Santos</option>
+                    <option value="44">Juliane Amato Silva</option>
+                    <option value="44164">Naiara Rios de Oliveira Araujo</option>
+                    <option value="222">Rosimere Aparecida Barbosa</option>
+                    <option value="233">Shauany Evangelista de Oliveira</option>
+                    <option value="92367">Yara Caroline Machado Santana </option>
+                    <option value="92412">Rosileide da Silva Cunha</option>
+                </select>
+            </div>
 
-                        <div class="col-md-2">
-                            <label>Status</label>
-                                                                                                                                                                                                                                <select class="form-control" id="status_filtro">
-                                <option value="">Selecione</option>
-                                <option value="6">Aberto</option>
-                                <option value="1">Aguardando</option>
-                                <option selected="" value="2">Pendente</option>
-                                <option value="3">Retornado</option>
-                                <option value="4">Solucionado</option>
-                                <option value="5">Cancelados</option>
-                            </select>
-                        </div>
+            <div class="col-md-2">
+                <label>Status</label>                                                                                                          <select class="form-control" id="status_filtro">
+                    <option value="">Selecione</option>
+                    <option value="6">Aberto</option>
+                    <option value="1">Aguardando</option>
+                    <option selected="" value="2">Pendente</option>
+                    <option value="3">Retornado</option>
+                    <option value="4">Solucionado</option>
+                    <option value="5">Cancelados</option>
+                </select>
+            </div>
 
-                        <div class="col-md-3 col-xs-6">
-                            <label>Assunto</label>
-                            <select class="form-control" id="assunto_filtro">
-                                <option value="">Selecione</option>
-                                <option value="241">DEVOLUÇÃO INTEGRAL</option>
-                                <option value="3">PEND ACOMPANHAMENTO</option>
-                                <option value="243">teste igor</option>
-                                <option value="33">ATRASO DE ENTREGA</option>
-                                <option value="37">AVARIA NO TRANSPORTE</option>
-                                <option value="44">CONSULTA DE CRÉDITO</option>
-                                <option value="76">DEVOLUÇÃO DE MERCADORIA</option>
-                                <option value="86">DIVERGÊNCIAS</option>
-                                <option value="87">EXTRAVIO DE VOLUME</option>
-                                <option value="88">ENTREGA END. DIVERGENTE</option>
-                                <option value="90">ENVIAR SEGUNDA VIA NF</option>
-                                <option value="91">ENVIO DE BOLETO</option>
-                                <option value="113">FALTA DE VOLUME NA ENTREGA</option>
-                                <option value="114">FALTOU MERCADORIA NO PEDIDO</option>
-                                <option value="116">MARTINS MARKETPLACE</option>
-                                <option value="131">PRECO ERRADO</option>
-                                <option value="136">PREVISAO DE ENTREGA </option>
-                                <option value="140">PRORROGAR BOLETO ATRASO ENTREG</option>
-                                <option value="142">RECLAMAÇÃO DE TRANSPORTE</option>
-                                <option value="148">SINISTRO</option>
-                                <option value="149">SOBRA DE MERCADORIA</option>
-                                <option value="150">SOLICITAÇÃO DE CANHOTO</option>
-                                <option value="187">REENTREGA</option>
-                                <option value="189">TROCA DE ETIQUETAS</option>
-                                <option value="190">TROCA DE PRODUTO</option>
-                                <option value="191">TROCA DE VOLUMES NA ENTREGA</option>
-                                <option value="201">TESTE</option>
-                                <option value="242">DEVOLUÇÃO PARCIAL</option>
-                        </select>
-                        </div>
-                        <div>
-                            <button id="filtro_chamado" style="background-color:#0076be;margin-top:2.5%;" class="btn btn-success m-t-2" onclick="teste()">Filtrar</button>
-                            <button id="limpa_filtro_chamado" style="margin-top:2.5%;" class="btn btn-success m-t-2">Todos</button>
-                            <button onclick="removeDados();" style="margin-top:2.5%;" class="btn btn-danger m-t-2">Limpa filtro</button>
-                        </div>
+            <div class="col-md-3 col-xs-6">
+                <label>Assunto</label>
+                <select class="form-control" id="assunto_filtro">
+                    <option value="">Selecione</option>
+                    <option value="241">DEVOLUÇÃO INTEGRAL</option>
+                    <option value="33">ATRASO DE ENTREGA</option>
+                    <option value="37">AVARIA NO TRANSPORTE</option>
+                    <option value="76">DEVOLUÇÃO DE MERCADORIA</option>
+                    <option value="87">EXTRAVIO DE VOLUME</option>
+                    <option value="91">ENVIO DE BOLETO</option>
+                    <option value="113">FALTA DE VOLUME NA ENTREGA</option>
+                    <option value="114">FALTOU MERCADORIA NO PEDIDO</option>
+                    <option value="131">PRECO ERRADO</option>
+                    <option value="140">PRORROGAR BOLETO ATRASO ENTREG</option>
+                    <option value="149">SOBRA DE MERCADORIA</option>
+                    <option value="187">REENTREGA</option>
+                    <option value="191">TROCA DE VOLUMES NA ENTREGA</option>
+                    <option value="242">DEVOLUÇÃO PARCIAL</option>
+            </select>
+            </div>
+            <div>
+                <button id="filtro_chamado" style="background-color:#0076be;margin-top:2.5%;" class="btn btn-success m-t-2" onclick="teste()">Filtrar</button>
+                <button id="limpa_filtro_chamado" style="margin-top:2.5%;" class="btn btn-success m-t-2">Todos</button>
+                <button onclick="removeDados();" style="margin-top:2.5%;" class="btn btn-danger m-t-2">Limpa filtro</button>
+            </div>
 
-                        <div class="row" style="margin: 0px 0px 10px !important;border-bottom:1px dashed #ccc; padding-bottom:10px;">
-                        </div>
-                        <div>
-                            <div class="flex-wrapper"></div>
-                        </div>
+            <div class="row" style="margin: 0px 0px 10px !important;border-bottom:1px dashed #ccc; padding-bottom:10px;">
+            </div>
+            <div>
+                <div class="flex-wrapper"></div>
+                </div>
 
-                        <div class="row" style="margin: 0px 0px 10px !important;border-bottom:1px dashed #ccc; padding-bottom:10px;">
-                        </div>
+                <div class="row" style="margin: 0px 0px 10px !important;border-bottom:1px dashed #ccc; padding-bottom:10px;">
+                </div>
 
-                        <div class="row" id="todosChamados" style="margin-top:4%;">
-                            <div class="col-lg-12">
-                                <div class="card border">
-                                    <div class="card-body">
-                                        <table class="table table-striped table-bordered table-hover " id="tabelaListaChamados" width="100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Assunto</th>
-                                                    <th>Aberto</th>
-                                                    <th>Ult.modif</th>
-                                                    <th style="max-width:1%;!important;">Transp</th>
-                                                    <th style="max-width:10%;!important;">Autor</th>
-                                                    <th>Chamado</th>
-                                                    <th>Cliente</th>
-                                                    <th style="min-width:19%;!important;">Ações</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="row" id="todosChamados" style="margin-top:4%;">
+                    <div class="col-lg-12">
+                        <div class="card border">
+                                
                         </div>
-
                     </div>
+                </div>
+
+            </div>
     </body>
 </html>
