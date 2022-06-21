@@ -5,6 +5,7 @@
             {{$chamado->email}}
             {{$chamado->setor}}
             {{$chamado->descricao}}
+            {{$chamado->Nome}}
         </li>    
     @endforeach
-</ul>  
+</ul> 

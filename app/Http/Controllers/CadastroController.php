@@ -18,11 +18,12 @@ class CadastroController extends Controller
         $SiteLogin = new SiteLogin();
         $SiteLogin->EMAIL=$request->Email;
         $SiteLogin->SENHA=$request->Senha;
+        $SiteLogin->NOME=$request->Nome;
 
         $SiteLogin->save();
 
 
-    return redirect('site.login');    
+    return redirect('/');    
     }
     
 }

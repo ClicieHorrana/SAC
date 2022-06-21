@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cadastros', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('Email');
-            $table->string('Senha');
+        Schema::create('site_logins', function (Blueprint $table) {
+            $table->string('Usuario');
         });
     }
 
@@ -28,6 +25,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cadastros');
+        Schema::dropIfExists('site_logins');
+       
     }
 };

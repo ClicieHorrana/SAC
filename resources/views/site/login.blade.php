@@ -4,19 +4,31 @@
         <title>Gestão</title>
         <meta charset="utf-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/datatables.min.css"/>
+       
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/datatables.min.js"></script>
 
-    <nav class="navbar bg-light">
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <h5 class="text-white h4">GamaSoft</h5>
+            <span class="text-muted">Sistema de Chamados</span>
+        </div>
+        
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="/img/gama.png" alt="" width="150" height="70">
-            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
+    
     <p></p>
     <p></p>
     <p></p>
@@ -24,7 +36,7 @@
     <p></p>
     <p></p>
     <p></p>
-    <div class="mx-auto text-align-center" style="width: 450px;">
+    <div class="mx-auto text-align-center" style="width: 15%;">
         <h4>Registre seu chamado</h4>
     </div>
     <p></p>
@@ -46,7 +58,12 @@
         </div>
     <div class="col-md-6">
         <label for="inputPassword4"  class="form-label">Setor</label>
-        <input type="password" name="Setor" class="form-control" id="inputPassword4">
+        <select class="form-select" name="Setor" aria-label="Default select example">
+            <option selected>Selecione</option>
+            <option value="SAC">SAC</option>
+            <option value="FINANCEIRO">FINANCEIRO</option>
+            <option value="CONTABILIDADE">CONTABILIDADE</option>
+          </select>
     </div>
     <div class="form-floating">
         <textarea class="form-control" name="Descricao" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px"></textarea>
@@ -57,14 +74,14 @@
     </div>
     </form>
 
-    <div class="mx-auto text-align-center" style="width: 355px;">
+    <div class="mx-auto text-align-center" style="width: 10%;">
         <h4>Chamados</h4>
     </div>
        
 
   {{--tabela de chamados criados--}}
     
-    <table class="table">
+    <table class="display" width="100%" id="resgate">
 
         <thead>
             <tr>
@@ -85,4 +102,14 @@
     </table>
     
     </body>
+
 </html>
+<script>
+   $(document).ready(function () {
+    $('#resgate').DataTable({
+        scrollY: '200px',
+        scrollCollapse: true,
+        paging: false,
+    });
+});
+</script>

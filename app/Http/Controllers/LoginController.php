@@ -9,7 +9,7 @@ class LoginController extends Controller
 {
     public function login(){
 
-        return view('site.login');
+        return view('site.chamado');
     }
 
 
@@ -23,6 +23,6 @@ class LoginController extends Controller
         $chamado->save();
 
         
-        return view('site.login');     
+        return redirect('/login');
     }
 }
