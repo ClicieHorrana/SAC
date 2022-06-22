@@ -14,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::any('/', 'App\Http\Controllers\PrincipalController@principal')->name('site.principal');
 Route::post('/autenticar', 'App\Http\Controllers\PrincipalController@autenticar')->name('site.autenticar');
-Route::post('/cadastro', 'App\Http\Controllers\CadastroController@store')->name('site.cadastro');
+Route::post('/cadastro', 'App\Http\Controllers\PrincipalController@store')->name('site.cadastro');
+
 Route::get('/login', 'App\Http\Controllers\LoginController@login')->name('site.login');
 Route::post('/login', 'App\Http\Controllers\LoginController@store')->name('site.chamado');
+Route::get('/sair', 'App\Http\Controllers\LoginController@sair')->name('site.sair');
+
+
 Route::get('/login', 'App\Http\Controllers\RegistroController@index')->name('site.registro');
 
-
+// testes
+Route::any('/teste', 'App\Http\Controllers\TesteController@index')->name('site.teste');

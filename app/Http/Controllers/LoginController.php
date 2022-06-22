@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SiteLogin;
 use Illuminate\Http\Request;
 use App\Models\Suporte;
+
 
 class LoginController extends Controller
 {
@@ -14,6 +16,8 @@ class LoginController extends Controller
 
 
    public function store(Request $request){
+
+        
         
         $chamado = new Suporte;
         $chamado->Email = $request->input('Email');
@@ -25,4 +29,9 @@ class LoginController extends Controller
         
         return redirect('/login');
     }
+    Public function sair(Request $request){
+        
+        return redirect('/');
+    }
+    
 }

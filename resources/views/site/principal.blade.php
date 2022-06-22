@@ -33,6 +33,7 @@
               </p>
               <form method="post" action="{{route('site.autenticar')}}">
                 @csrf
+                
                 <input name="Email" value="{{ old('Email')}}" type="text" placeholder="E-mail" class="borda-preta">
                 {{$errors->has('Email') ? $errors->first('Email'):'' }}
                 <input name="Senha" value="{{ old('Senha')}}" type="password" required placeholder="Senha" class="borda-preta">

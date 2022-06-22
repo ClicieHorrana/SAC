@@ -22,15 +22,17 @@
         
     </div>
     <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+        <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+            
+              <a class="nav-link active" aria-current="page" href="{{route('site.sair')}}">Sair</a>
+            </li>
+        </ul>
     </nav>
+    @foreach ($usuario as $usuario)
+            <p>{{$usuario->nome}}</p>
+    @endforeach 
     
-    <p></p>
-    <p></p>
     <p></p>
     <p></p>
     <p></p>
@@ -52,6 +54,7 @@
     <div style="width:100%; margin-left: auto; margin-right: auto;"> 
     <form class="row g-3" method="post" action="{{route('site.chamado')}}">
     @csrf
+    
         <div class="col-md-6">
             <label for="inputEmail4"  class="form-label">Email</label>
             <input type="email" name="Email" class="form-control" id="inputEmail4">
@@ -93,11 +96,13 @@
         <tbody>
             <tr>
         @foreach ($chamado as $chamado)
+
             <td>{{$chamado->email}}</td>
             <td>{{$chamado->setor}}</td>
             <td>{{$chamado->descricao}}</td>
+            
             </tr>
-        @endforeach
+        @endforeach 
         </tbody>
     </table>
     
